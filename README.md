@@ -10,21 +10,24 @@ We provide the codebase to reproduce our custom ~50M parameter Vision-Language M
 ## 📦 Model Weights and Dataset Disclaimer
 **Note for Reviewers:** To maintain strict double-blind anonymity and adhere to anonymous repository storage limits, the pre-trained `.pth` weights for our custom VLM, the Ollama baseline outputs, and the high-resolution video files for the OOD dataset are not hosted directly in this repository. 
 
-The complete training scripts, architectural definitions, and evaluation pipelines are provided here for full methodological transparency. Upon publication, all model checkpoints, the 1,000-frame curated OOD dataset (Tokyo, Oslo, Bay Area), and the full training corpus will be publicly released on HuggingFace and Zenodo.
+The complete training scripts, architectural definitions, and evaluation pipelines are provided here for full methodological transparency. Upon publication, all model checkpoints, the 1,000-frame curated OOD dataset (Tokyo, Oslo, Bay Area, Manhattan, and Rural USA), and the full training corpus will be publicly released on HuggingFace and Zenodo.
 
 ## 📁 Repository Structure
 ```text
 ├── data/
-│   ├── id_samples/                # Sample images from BDD100K (In-Distribution)
-│   └── ood_samples/               # Sample curated images from Tokyo/Oslo/Bay Area/Manhattan/US Fog (Out-of-Distribution)
-├── vlm.py                        # Core VLM architecture (ConvNeXt + Spatial Projector)
-├── minigpt.py                    # Causal language decoder architecture (MiniLLM)
-├── build_ood.py                  # Algorithmic curation (Laplacian variance, yt-dlp, ego-vehicle cropping)
-├── train_model.py                # Main training loop (supports multi-seed runs & uncertainty loss)
-├── VLM_agent.py                  # Evaluation script for ID and OOD testing (Semantic Exact Match)
-├── ollama_baseline_eval.py       # Wrapper for Moondream2 / Ollama baseline inference
-├── requirements.txt              # Environment dependencies
-└── README.md
+│   ├── raw_bdd100k/              # Raw dataset files (omitted in repo for size constraints)
+│   ├── sample_id/                # Sample images from BDD100K (In-Distribution)
+│   └── sample_ood/               # Sample curated images from Tokyo/Oslo (Out-of-Distribution)
+├── models/
+│   ├── minigpt.py                # Causal language decoder architecture (MiniLLM)
+│   └── vlm.py                    # Core VLM architecture (ConvNeXt + Spatial Projector)
+├── scripts/
+│   ├── build_ood.py              # Algorithmic curation (Laplacian variance, yt-dlp, ego-vehicle cropping)
+│   ├── ollama_baseline_eval.py   # Wrapper for Moondream2 / Ollama baseline inference
+│   ├── train_model.py            # Main training loop (supports multi-seed runs & uncertainty loss)
+│   └── VLM_agent.py              # Evaluation script for ID and OOD testing (Semantic Exact Match)
+├── README.md                     # Repository documentation
+└── requirements.txt              # Environment dependencies
 ```
 ## 🚀 Quickstart
 
