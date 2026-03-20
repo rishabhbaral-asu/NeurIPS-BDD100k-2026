@@ -15,8 +15,8 @@ The complete training scripts, architectural definitions, and evaluation pipelin
 ## 📁 Repository Structure
 ```text
 ├── data/
-│   ├── sample_id/                # Sample images from BDD100K (In-Distribution)
-│   └── sample_ood/               # Sample curated images from Tokyo/Oslo (Out-of-Distribution)
+│   ├── id_samples/                # Sample images from BDD100K (In-Distribution)
+│   └── ood_samples/               # Sample curated images from Tokyo/Oslo/Bay Area/Manhattan/US Fog (Out-of-Distribution)
 ├── vlm.py                        # Core VLM architecture (ConvNeXt + Spatial Projector)
 ├── minigpt.py                    # Causal language decoder architecture (MiniLLM)
 ├── build_ood.py                  # Algorithmic curation (Laplacian variance, yt-dlp, ego-vehicle cropping)
