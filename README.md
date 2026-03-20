@@ -25,6 +25,7 @@ The complete training scripts, architectural definitions, and evaluation pipelin
 ├── ollama_baseline_eval.py       # Wrapper for Moondream2 / Ollama baseline inference
 ├── requirements.txt              # Environment dependencies
 └── README.md
+```
 ## 🚀 Quickstart
 
 ### 1. Installation
@@ -34,23 +35,27 @@ Ensure you have Python 3.9+ installed. We recommend using a virtual environment 
 git clone <anonymous-repo-url>
 cd vlm-domain-gap
 pip install -r requirements.txt
-
+```
 ### 2. Dataset Curation
 To view the algorithmic filtering pipeline used to curate high-variance, open-vocabulary driving footage from raw video sources, see the logic within build_ood.py:
 ```bash
 python build_ood.py
+```
 ### 3. Training the Custom VLM
 To train the model from scratch on the BDD100K dataset, run the following command. The script inherently supports calculating statistical variance across multiple seeds.
 ```bash
 python train_model.py
+```
 ### 4. Evaluation (In-Distribution vs. Out-of-Distribution)
 To evaluate the trained model's Semantic Exact Match on the ID (BDD100K) and OOD (Global Curated) datasets:
 ```bash
 python VLM_agent.py
+```
 ### 5. Reproducing Baseline Metrics
 To reproduce the zero-shot baseline metrics via Ollama, ensure the Ollama daemon is running locally and execute:
 ```bash
 python ollama_baseline_eval.py
+```
 # 🔬 Core Contributions Validated in this Codebase
 ## Multi-Task Uncertainty Loss: Implemented within train_model.py for the dynamic weighting of Weather, Time, and Scene tasks.
 
