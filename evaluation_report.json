@@ -1,0 +1,74 @@
+{
+    "ID_BDD100K": {
+        "weather_acc": 0.7951,
+        "weather_prec": 0.6230025570842265,
+        "weather_f1": 0.6207037615487289,
+        "timeofday_acc": 0.8371,
+        "timeofday_prec": 0.6247758088997447,
+        "timeofday_f1": 0.6110359147677886,
+        "scene_acc": 0.7484,
+        "scene_prec": 0.3872679563399663,
+        "scene_f1": 0.3620568984449432,
+        "exact_match": 0.5121,
+        "semantic_match": 0.59
+    },
+    "OOD_Curated": {
+        "weather_acc": 0.6425925925925926,
+        "weather_prec": 0.48935761296388475,
+        "weather_f1": 0.35259348411569763,
+        "timeofday_acc": 0.7018518518518518,
+        "timeofday_prec": 0.5459875819471317,
+        "timeofday_f1": 0.5132868304421329,
+        "scene_acc": 0.7333333333333333,
+        "scene_prec": 0.39055801403130064,
+        "scene_f1": 0.3937625972366147,
+        "exact_match": 0.39444444444444443,
+        "semantic_match": 0.4537037037037037
+    },
+    "Top_OOD_Hallucinations": {
+        "Weather": [
+            [
+                "clear -> overcast",
+                38
+            ],
+            [
+                "rainy -> overcast",
+                32
+            ],
+            [
+                "snowy -> clear",
+                31
+            ],
+            [
+                "snowy -> undefined",
+                25
+            ],
+            [
+                "rainy -> undefined",
+                24
+            ]
+        ],
+        "Scene": [
+            [
+                "residential -> highway",
+                23
+            ],
+            [
+                "highway -> city street",
+                15
+            ],
+            [
+                "tunnel -> city street",
+                11
+            ],
+            [
+                "city street -> highway",
+                10
+            ],
+            [
+                "tunnel -> highway",
+                6
+            ]
+        ]
+    }
+}
