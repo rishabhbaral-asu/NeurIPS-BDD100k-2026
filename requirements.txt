@@ -1,0 +1,23 @@
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image Processing & Computer Vision
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Data Collection & Array Manipulation
+yt-dlp>=2023.10.0
+numpy>=1.24.0
+
+# Metrics, Plotting & Evaluation
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.2
+
+# Baseline Model Inference
+ollama>=0.1.6
+
+# Utilities & Jupyter Environments
+tqdm>=4.66.0
+ipython>=8.10.0
